@@ -16,5 +16,22 @@ namespace WindowsFormsApplication2
         {
             InitializeComponent();
         }
+        
+        private void Rabbit_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.Rabbit.Font = new System.Drawing.Font("Arial",30F, System.Drawing.FontStyle.Bold);
+            this.Rabbit.BackColor = System.Drawing.SystemColors.ScrollBar;
+
+
+        }
+        public Random r = new Random();
+        private void Rabbit_MouseUp(object sender, MouseEventArgs e)
+        {
+            int x = r.Next(0, 925);
+            int y = r.Next(0, 445);
+            this.Rabbit.Location = new System.Drawing.Point(x,y);
+            this.Rabbit.BackColor = System.Drawing.SystemColors.WindowFrame;
+        }
+
     }
 }
